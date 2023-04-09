@@ -1,0 +1,67 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.container{
+     background-color: darkgray;
+     min-height: 100vh; /* unidade de medidade "viewport", onde se usa o tamanho da tela como padrão, tornando, assim, a aplicação mais responsiva */
+     display: grid;
+     grid-template-columns: repeat(3, 1fr); /* define a quantidade de colunas que existirá, definindo a porcentagem (ou frame) que cada uma ocupará da tela */ 
+     gap: 10px 15px; /*define o distanciamento entre as boxes, primeiro, verticamente, depois horizontalmente, ou dando aos dois o mesmo valor, colocando apenas um valor*/
+     /* grid-template-rows: repeat(3, 1fr); define a quantidade de linhas que existirá, definindo a porcentagem (ou frame) que cada uma ocupará da tela */ 
+     grid-auto-rows: minmax(100px, auto); /*define o tamanho de cada linha, e com a ajuda da função minmax, define o tamanho mínimo e o máximo ajudando a responsividade */
+     grid-template-areas: /* uma maneira mais simples de organizar os boxes dentro do container, ficando exatamente como o posicionamento abaixo */
+          "item1 item1 item1"
+          "item2 item2 item3"
+          "item2 item2 item4"
+          "item5 item5 item5"
+          "item5 item5 item5"
+          "item6 item7 item7"
+          "item8 item7 item7"
+          "item9 item9 item9";
+}
+
+.item{
+     border: 2px solid black;
+     background-color: white;
+     font-size: 30px;
+     padding: 10px;
+}
+
+.item1{
+     grid-area: item1;
+}
+
+.item2{
+     grid-area: item2;
+}
+
+.item3{
+     grid-area: item3;
+}
+
+.item4{
+     grid-area: item4;
+}
+
+.item5{
+     grid-area: item5;
+}
+
+.item6{
+     grid-area: item6;
+}
+
+.item7{
+     grid-area: item7;
+}
+
+.item8{
+     grid-area: item8;
+}
+
+.item9{
+     grid-area: item9;
+}

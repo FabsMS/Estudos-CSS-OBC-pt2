@@ -1,0 +1,44 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.header{
+     background-color: #000000;
+     display: flex;
+     justify-content: space-between;
+     padding: 20px 30px; /* primeiro valor, vertical, segundo valor, horizontal */
+     align-items: center;
+     flex-wrap: wrap;
+}
+
+.logo-rock{
+     width: 60px;
+     height: auto;
+}
+
+.logo-obc{
+     width: 270px;
+     height: auto;
+}
+
+.button-header{
+     display: flex;
+     gap: 10px;
+}
+
+.button{
+     font-size: 20px;
+     padding: 15px 20px;
+     color: white;
+     background-color: transparent;
+     border-radius: 20px;
+     border-color: white;
+     cursor: pointer; /* muda o cursor para a mãozinha quando se coloca o mouse em cima */
+     transition: 0.7s;
+}
+
+.button:hover{ /* realiza ações quando se passa o mouse em cima do botão */
+     border-color: #ff0044;
+}

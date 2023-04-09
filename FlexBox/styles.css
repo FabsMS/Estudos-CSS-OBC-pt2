@@ -1,0 +1,58 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.container{
+     background-color: darkgray;
+     min-height: 100vh; /* unidade de medidade "viewport", onde se usa o tamanho da tela como padrão, tornando, assim, a aplicação mais responsiva */
+     display: flex; /* propriedade que define o flexbox */
+     /* flex-direction: column;  define a direção do flexbox como vertical, em coluna*/
+     /* row-gap: 15px; espaçamento entre as linhas flex, em caso  de estarem dispostos em coluna*/
+     flex-direction: row;
+     /* column-gap: 15px; espaçamento entre as colunas flex, em caso  de estarem dispostos em linha*/
+     gap: 0px 15px; /* espaçamento definido, tanto na horizontal, quando na vertical, entre as flex; e no caso de terem dois valores, o primeiro é o do column-gap*/
+     /* justify-content: center;  *//* alinhamento horizontal das flexbox */
+     align-items: center; /* alinhamento vertical das flexbox */
+     /* flex-wrap: wrap; */ /* faz com que os itens troquem de linha dependendo do tamanho da tela do dispositivo, tornando a aplicação mais responsiva */
+}
+
+.item{
+     width: 100%;
+     height: 70px;
+     border: 2px solid black;
+     background-color: white;
+     font-size: 20px;
+     
+     /* define o tamanho padrão de largura das boxes, substituindo o width */
+     /* flex-basis: 200px; */
+
+     /* faz com que a box atinja seu maior tamanho possível na tela */
+     /* flex-grow: 1; */
+
+     /* define o quanto um elemento irá diminuir em relação à diminuição da tela; em 0, nunca irá diminuir*/
+     /* flex-shrink: 0; */
+
+     /* tornando os itens dentro das box centralizados */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.item1{
+     order: 2;
+
+     /* alinhamento da box */
+     align-self: flex-start;
+}
+
+.item2{
+     /* da maneira inserida, ficaram descritos, respectivamente, grow, shrink e basis */
+     /* flex: 1 0 200px;  */
+     order: 3;
+}
+
+.item3{
+     order: 1;
+}

@@ -1,0 +1,60 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.container{
+     background-color: darkgray;
+     min-height: 100vh; /* unidade de medidade "viewport", onde se usa o tamanho da tela como padrão, tornando, assim, a aplicação mais responsiva */
+     display: grid;
+     grid-template-columns: repeat(4, 1fr); /* define a quantidade de colunas que existirá, definindo a porcentagem (ou frame) que cada uma ocupará da tela */ 
+     gap: 10px 15px; /*define o distanciamento entre as boxes, primeiro, verticamente, depois horizontalmente, ou dando aos dois o mesmo valor, colocando apenas um valor*/
+     /* grid-template-rows: repeat(3, 1fr); define a quantidade de linhas que existirá, definindo a porcentagem (ou frame) que cada uma ocupará da tela */ 
+     grid-auto-rows: minmax(100px, auto); /*define o tamanho de cada linha, e com a ajuda da função minmax, define o tamanho mínimo e o máximo ajudando a responsividade */
+}
+
+.item{
+     border: 2px solid black;
+     background-color: white;
+     font-size: 30px;
+     padding: 10px;
+}
+
+.item1{
+     grid-column: 1/5;
+}
+
+.item2{
+     grid-column: 1/3;
+     grid-row: 2/4;
+}
+.item3{
+     grid-column: 3/5;
+}
+
+.item4{
+     grid-column: 3/5;
+}
+
+.item5{
+     grid-row: 4/6;
+     grid-column: 1/5;
+}
+
+.item6{
+     grid-column: 1/3;
+}
+
+.item7{
+     grid-column: 1/3;
+}
+
+.item8{
+     grid-column: 3/5;
+     grid-row: 6/8;
+}
+
+.item9{
+     grid-column: 1/5;
+}
